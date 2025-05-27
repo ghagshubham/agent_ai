@@ -1,0 +1,22 @@
+[project]
+name = "langgraphagent"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.12",
+    "ipykernel>=6.29.5",
+    "langchain>=0.3.25",
+    "langchain-openai>=0.3.18",
+    "langgraph>=0.4.7",
+    "matplotlib>=3.10.3",
+    "numpy>=2.2.6",
+    "openai>=1.82.0",
+    "pandas>=2.2.3",
+    "pydantic>=2.11.5",
+    "python-dotenv>=1.1.0",
+    "requests>=2.32.3",
+    "seaborn>=0.13.2",
+    "streamlit>=1.45.1",
+    "tavily-python>=0.7.3",
+    "uvicorn>=0.34.2",
+]
