@@ -49,7 +49,6 @@ class ResearchAgent:
             return {
                 "error": str(e),
                 "status": "failed",
-                "fallback_info": self._get_fallback_info(task)
             }
     
     def _extract_search_queries(self, task: str) -> list:
@@ -156,21 +155,3 @@ class ResearchAgent:
         except Exception:
             return ["Key findings extraction unavailable"]
     
-    def _get_fallback_info(self, task: str) -> Dict[str, Any]:
-        """Provide fallback information when search fails"""
-        
-        if "quantum computing" in task.lower() and "cybersecurity" in task.lower():
-            return {
-                "summary": "Quantum computing poses significant threats to current cryptographic systems",
-                "key_points": [
-                    "RSA and ECC encryption vulnerable to quantum algorithms",
-                    "Financial services and healthcare most at risk",
-                    "Post-quantum cryptography standards being developed",
-                    "Timeline: 10-15 years for practical quantum computers"
-                ]
-            }
-        else:
-            return {
-                "summary": f"Research information for: {task}",
-                "key_points": ["Detailed research unavailable due to connection issues"]
-            }
